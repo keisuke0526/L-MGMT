@@ -1,0 +1,43 @@
+.header
+  .header-logo
+    = link_to 'LuggageMGT', root_path
+  .header-content
+    = link_to '登録する', new_item_path
+
+.main
+  .registration
+    = form_for @item, html: {class: "form-group"} do |f|
+      .field
+        = f.label :ゲスト名, class: "form-title"
+        %span.form-require 必須
+        %br/
+        = f.text_field :guest_name, class: "form-control"
+      .field
+        = f.label :お引き取り日, class: "form-title"
+        %span.form-require 必須
+        %br/
+        = f.date_field :pickup_day, class: "form-control"
+      .field
+        = f.label :保管場所, class: "form-title"
+        %span.form-require 必須
+        %br/
+        = f.text_field :houseroom, class: "form-control"
+      .field
+        = f.label :部屋番号, class: "form-title"
+        %span
+        %br/
+        = f.text_field :room_no, class: "form-control"
+      .field
+        = f.label :電話番号, class: "form-title"
+        %span
+        %br/
+        = f.text_field :phone_number, class: "form-control"
+      .field
+        = f.label :備考欄, class: "form-title"
+        %span
+        %br/
+        = f.text_field :remark, class: "form-control"
+      .actions  
+        = f.submit '登録する', class: "btn-primary"
+
+= render "footer"

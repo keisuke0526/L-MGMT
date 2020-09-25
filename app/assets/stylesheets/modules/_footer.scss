@@ -1,0 +1,10 @@
+.footer {
+  height: 30px;
+  background-color: #1c305c;
+  &__text {
+    text-align : center;
+    line-height: 30px;
+    font-size: 12px;
+    color: #fff;
+  }
+}

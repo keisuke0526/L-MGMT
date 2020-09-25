@@ -1,0 +1,26 @@
+.main
+  .table-responsive
+    %table.chart
+      %thead
+        %tr
+          %th お名前
+          %th お引き取り日
+          %th 保管場所
+          %th 部屋番号
+          %th 電話番号
+          %th 備考欄
+      %tbody
+        - @items.each do |item|
+          %tr
+            %td
+              = item.guest_name
+            %td
+              = item.pickup_day
+            %td
+              = item.houseroom
+            %td
+              = item.room_no
+            %td
+              = item.phone_number
+            %td
+              = item.remark

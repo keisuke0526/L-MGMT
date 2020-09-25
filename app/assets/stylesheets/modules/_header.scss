@@ -1,0 +1,29 @@
+.header {
+  height: 100px;
+  background-color: #1c305c;
+  display: flex;
+  justify-content: space-between;
+    .header-logo a {
+      display: block;
+      text-decoration: none;
+      line-height: 100px;
+      margin-left: 50px;
+      font-size: 40px; 
+      color: white;
+      letter-spacing: 0.1em;
+    }
+    .header-content a {
+      text-decoration: none;
+      line-height: 100px;
+      margin-right: 50px;
+      color: white;
+      border: solid 3px white;
+      border-radius: 3px;
+      padding: 10px;
+      cursor: pointer;
+      letter-spacing: 0.1em
+    }
+    .header-content a:hover {
+      border-style: dashed;
+    }
+}

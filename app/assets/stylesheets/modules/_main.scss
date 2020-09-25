@@ -1,0 +1,76 @@
+.main {
+  height: calc(100vh - 100px - 30px);
+  overflow: auto;
+  letter-spacing: 0.1em;
+  .table-responsive {
+    color: black;
+    padding: 50px;
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    .chart {
+      width: 60%;
+      margin: 0 auto;
+      position: relative;
+      thead {
+        border-bottom: 2px dashed #ccc;
+        margin: 0 auto;
+        tr {
+          th {
+            text-align: center;
+          }
+        }
+      }
+      tbody {
+        tr {
+          border-bottom: 2px dashed #ccc;
+          height: 80px;
+          td {
+            
+          }
+        }
+      }
+      tr:nth-child(odd) td {
+        background-color: #eee; 
+     }
+    }
+  }
+  .registration {
+    .form-group {
+      width: 800px;
+      display: flex;
+      flex-direction: column;
+      padding-top: 40px;
+      margin: 0 auto;
+      .field {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        .form-title {
+          font-size: 20px;
+        }
+        .form-control {
+          margin-top: 5px;
+          width: 300px;
+        }
+        .form-require {
+          background-color: red;
+          margin: 0 0 0 8px;
+          padding: 2px 4px;
+          border-radius: 2px;
+          color: #fff;
+          font-size: 12px;
+          width: 32px;
+          height: 19px;
+        }
+      }
+      .actions {
+        margin: 0 auto;
+        .btn-primary {
+          margin-top: 50px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
