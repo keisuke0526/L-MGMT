@@ -1,74 +1,55 @@
-# Ruby CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-ruby/ for more details
-#
 version: 2
 jobs:
-  rubocop:
+  build:
     docker:
-      - image: circleci/ruby:2.5.3-node-browsers-legacy
+      - image: circleci/ruby:2.5.1-node-browsers
         environment:
-          - BUNDLER_VERSION: 1.17.3
-          - RAILS_ENV: 'test'
-      - image: circleci/mysql:5.6.49
-        environment:
-          - MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
-          - MYSQL_ROOT_HOST: '%'
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "Gemfile.lock" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
-      - run: yarn install
-      - save_cache:
-          paths:
-            - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-      # Rubocop
-      - run:
-          name: Rubocop
-          command: bundle exec rubocop
+          RAILS_ENV: 'test'
 
-  rspec:
-    docker:
-      - image: circleci/ruby:2.5.3-node-browsers-legacy
+      - image: circleci/mysql:5.6
         environment:
-          - BUNDLER_VERSION: 1.17.3
-          - RAILS_ENV: 'test'
-      - image: circleci/mysql:5.6.49
-        environment:
-          - MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
-          - MYSQL_ROOT_HOST: '%'
-    working_directory: ~/repo
+          MYSQL_ROOT_PASSWORD: "password"
+          MYSQL_ROOT_HOST: "%"
+
+    working_directory: ~/study_group
+
     steps:
+      - run:
+          command: chromedriver
+          background: true
+          
       - checkout
+
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}
-            # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
-      - run: yarn install
+
+      - run:
+          name: install dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
       - save_cache:
           paths:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Wait for DB
+          command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120s
       - run: bundle exec rake db:create
       - run: bundle exec rake db:schema:load
-      # Rspec
       - run:
-          name: Rspec
-          command: bundle exec rspec
-
-workflows:
-  version: 2
-  rubocop_rspec:
-    jobs:
-      - rubocop
-      - rspec:
-          requires:
-            - rubocop
+          name: run tests
+          command: |
+            mkdir /tmp/test-results
+            TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)"
+            bundle exec rspec --format progress \
+                            --out /tmp/test-results/rspec.xml \
+                            --format progress \
+                            $TEST_FILES
+      - store_test_results:
+          path: /tmp/test-results
+      - store_artifacts:
+          path: /tmp/test-results
+          destination: test-results
