@@ -42,4 +42,5 @@
 |houseroom|string|null: false|
 |room_no|integer||
 |phone_number|integer||
+|remark|string||
 
