@@ -51,7 +51,8 @@ test:
 #
 production:
   <<: *default
-  database: l-mgmt_production
-  username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DB_HOST'] %>
+  database: <%= ENV['DB_DATABASE'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
