@@ -3,9 +3,10 @@
 
 ## 注目して欲しいところ
 - 環境開発にDockerを使用。
-- CircleCIを使って自動テスト(RSpec,rubocop)、自動デプロイを実行。
+- CircleCIを使って自動テスト(RSpec,rubocop)を実行。
 
 ## 使用技術
+
 ### 開発環境
 - Docker
 - CircleCI
@@ -35,11 +36,6 @@
 - ゲスト名でお荷物の検索機能
 
 
-## テスト
-- RSpec
-  - 単体テスト
-  - コントローラーテスト
-  - システムテスト(capybara)
 
 ## itemsテーブル
 |Column|Type|Option|
