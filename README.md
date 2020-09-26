@@ -12,6 +12,9 @@
 - CircleCI
 - Github
 
+## クラウドアーキテクチャ
+<img width="1276" alt="b7a13e5a781896e27df00e8912271df6" src="https://user-images.githubusercontent.com/60959289/94339256-75864d00-0033-11eb-81af-0af7d70101fb.png">
+
 ## フロントエンド
 - haml
 - scss
