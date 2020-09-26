@@ -11,9 +11,6 @@
 - CircleCI
 - Github
 
-## クラウドアーキテクチャ
-<img width="1247" alt="l-mgmt" src="https://user-images.githubusercontent.com/60959289/94340181-b03fb380-003a-11eb-8651-3e4ff77d33ad.png">
-
 ## フロントエンド
 - haml
 - scss
@@ -27,6 +24,9 @@
 ## インフラ
 - AWS
 - EC2
+
+## クラウドアーキテクチャ
+<img width="1247" alt="l-mgmt" src="https://user-images.githubusercontent.com/60959289/94340181-b03fb380-003a-11eb-8651-3e4ff77d33ad.png">
 
 
 ## 機能一覧
