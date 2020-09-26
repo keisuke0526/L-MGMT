@@ -12,7 +12,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: "password"
           MYSQL_ROOT_HOST: "%"
 
-    working_directory: ~/study_group
+    working_directory: ~/l-mgmt
 
     steps:
       - run:
