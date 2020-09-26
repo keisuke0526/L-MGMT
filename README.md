@@ -26,7 +26,8 @@
 - EC2
 
 ## クラウドアーキテクチャ
-<img width="1247" alt="l-mgmt" src="https://user-images.githubusercontent.com/60959289/94340181-b03fb380-003a-11eb-8651-3e4ff77d33ad.png">
+<img width="1246" alt="lmgmt" src="https://user-images.githubusercontent.com/60959289/94340247-3825bd80-003b-11eb-9c81-62ea4a818d3c.png">
+
 
 
 ## 機能一覧
