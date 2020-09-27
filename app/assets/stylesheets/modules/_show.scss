@@ -1,8 +1,8 @@
-.main {
-  height: calc(100vh - 100px - 30px);
+.main-show {
   width: 100%;
-  overflow: auto;
   letter-spacing: 0.1em;
+  position: absolute;
+  margin-top: 50px;
   .table-responsive {
     color: black;
     padding: 50px;
@@ -76,5 +76,48 @@
   }
   .remark-box {
     height: 100px;
+    width: 50%;
+    background-color: #eee;
+    margin: 0 auto;
+    position: relative;
+    overflow: auto;
+    font-size: 15px;
+    &__top {
+      position:absolute;
+      top: 10px;
+      left: 20px;
+      border-bottom: 2px solid #666;
+    }
+    &__text {
+      position:absolute;
+      top: 40px;
+      left: 20px;
+    }
+  }
+  .container {
+    height: 100px;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    overflow: auto;
+    font-size: 15px;
+    padding-top: 20px;
+    color: #666;
+    &__btn {
+
+      &--edit {
+        text-decoration: none;
+        color: black;
+      }
+      &--destroy {
+        text-decoration: none;
+        color: black;
+      }
+    }
+    .container__back {
+      text-decoration: none;
+      color: #666;
+      float: right;
+    }
   }
 }

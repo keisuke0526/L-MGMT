@@ -1,0 +1,43 @@
+= render "header"
+.main-show
+  .table-responsive
+    %table.chart
+      %thead
+        %tr
+          %th お名前
+          %th お引き取り日
+          %th 保管場所
+          %th 部屋番号
+          %th 電話番号
+      %tbody
+        %tr
+          %td
+            = @item.guest_name
+          %td
+            = @item.pickup_day
+          %td
+            = @item.houseroom
+          %td
+            = @item.room_no
+          %td
+            = @item.phone_number
+  .remark-box
+    .remark-box__top
+      %th 備考欄
+    .remark-box__text
+      = @item.remark
+  
+  .container
+    .container__btn
+      =link_to "/items/#{@item.id}/edit", class:'container__btn--edit' do
+        編集する
+      =link_to "/items/#{@item.id}", class:'container__btn--destroy', method: :delete, data: { confirm: '削除しますか？' } do
+        削除する
+    =link_to "/", class:'container__back' do
+      戻る
+
+    
+
+
+
+= render "footer"
