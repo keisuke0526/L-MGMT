@@ -14,17 +14,16 @@
       margin: 0 auto;
       position: relative;
       thead {
-        border-bottom: 2px dashed #ccc;
         margin: 0 auto;
         tr {
           th {
             text-align: center;
+            font-weight: bold;
           }
         }
       }
       tbody {
         tr {
-          border-bottom: 2px dashed #ccc;
           height: 80px;
           td {
             
