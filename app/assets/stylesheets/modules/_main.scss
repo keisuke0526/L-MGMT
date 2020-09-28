@@ -1,3 +1,5 @@
+@import "config/valiable";
+
 .main {
   height: calc(100vh - 100px - 30px);
   width: 100%;
@@ -15,9 +17,6 @@
       padding: 0 10px;
       vertical-align : middle;
     }
-  }
-  #result {
-
   }
 
   .table-responsive {
@@ -40,12 +39,13 @@
         }
       }
       tbody {
-        tr {
+        .clickable-row {
           border-bottom: 2px dashed #ccc;
           height: 80px;
-          td {
-            
-          }
+        }
+        .clickable-row:hover {
+          @include hov-btn;
+          cursor: pointer;
         }
       }
       tr:nth-child(odd) td {
@@ -65,7 +65,7 @@
         margin-top: 20px;
         text-align: center;
         .form-title {
-          font-size: 20px;
+          font-size: 17px;
         }
         .form-control {
           margin-top: 5px;
@@ -77,7 +77,7 @@
           padding: 2px 4px;
           border-radius: 2px;
           color: #fff;
-          font-size: 12px;
+          font-size: 10px;
           width: 32px;
           height: 19px;
         }
@@ -93,5 +93,18 @@
   }
   .remark-box {
     height: 100px;
+  }
+  .to-root-container {
+    text-align: center;
+    .back-btn {
+    text-decoration: none;
+    color: black;
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+    }
+    .back-btn:hover {
+      @include hov-btn;
+    }
   }
 }
