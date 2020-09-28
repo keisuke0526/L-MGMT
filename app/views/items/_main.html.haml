@@ -14,9 +14,9 @@
           %th 電話番号
       %tbody
         - @items.each do |item|
-          %tr
+          %tr.clickable-row{"data-href" => "/items/#{item.id}"}
             %td
-              = link_to item.guest_name, "/items/#{item.id}"
+              = item.guest_name
               様
             %td
               = item.pickup_day
