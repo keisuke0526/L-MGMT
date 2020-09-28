@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2020_09_25_134648) do
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "guest_name", null: false
     t.date "pickup_day", null: false
-    t.integer "houseroom", null: false
+    t.string "houseroom", null: false
     t.integer "room_no"
     t.string "phone_number"
     t.string "remark"
