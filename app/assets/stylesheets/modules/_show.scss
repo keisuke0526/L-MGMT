@@ -1,3 +1,5 @@
+@import "config/valiable";
+
 .main-show {
   width: 100%;
   letter-spacing: 0.1em;
@@ -25,9 +27,6 @@
       tbody {
         tr {
           height: 80px;
-          td {
-            
-          }
         }
       }
       tr:nth-child(odd) td {
@@ -103,20 +102,19 @@
     padding-top: 20px;
     color: #666;
     &__btn {
-
       &--edit {
-        text-decoration: none;
-        color: black;
+        @include show-btn;
+        @include hov-btn;
       }
       &--destroy {
-        text-decoration: none;
-        color: black;
+        @include show-btn;
+        @include hov-btn;
       }
     }
     .container__back {
-      text-decoration: none;
-      color: #666;
       float: right;
+      @include show-btn;
+      @include hov-btn;
     }
   }
 }
