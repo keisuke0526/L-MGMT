@@ -3,6 +3,23 @@
   width: 100%;
   overflow: auto;
   letter-spacing: 0.1em;
+  .search-form {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    .search-input {
+      width: 30%;
+      vertical-align : middle;
+    }
+    .search-btn {
+      padding: 0 10px;
+      vertical-align : middle;
+    }
+  }
+  #result {
+
+  }
+
   .table-responsive {
     color: black;
     padding: 50px;

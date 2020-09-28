@@ -41,6 +41,10 @@ class ItemsController < ApplicationController
     redirect_to root_path, notice: "商品を削除しました。"
   end
 
+  def search
+    @items = Item.search(params[:keyword])
+  end
+
   private
     def item_params
       params.require(:item).permit(:guest_name, :pickup_day, :houseroom, :room_no, :phone_number, :remark)
