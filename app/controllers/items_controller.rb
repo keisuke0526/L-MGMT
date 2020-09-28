@@ -11,8 +11,9 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if  @item.save
-      redirect_to root_path
+      redirect_to root_path, notice: '登録内容が保存されました。'
     else
+      flash.now[:alert] = '登録方法に誤りがあります。'
       render :new
     end
   end
@@ -23,8 +24,11 @@ class ItemsController < ApplicationController
 
   def update
     item = Item.find(params[:id])
-    item.update(item_params)
-    redirect_to root_path
+    if item.update(item_params)
+      redirect_to root_path, notice:'更新しました'
+    else
+      redirect_to edit_item_path(item.id), notice: '更新できませんでした' 
+    end
   end
 
   def show
@@ -34,7 +38,7 @@ class ItemsController < ApplicationController
   def destroy
     item = Item.find(params[:id])
     item.destroy
-    redirect_to root_path
+    redirect_to root_path, notice: "商品を削除しました。"
   end
 
   private
