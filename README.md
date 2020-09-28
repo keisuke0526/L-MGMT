@@ -1,7 +1,7 @@
 ## LuggageMGT
 ホテルマンとして勤務していた時の、お客様のお荷物を管理する業務のペーパーレス化を図るため、また、システム化したいという思いがあり作成しました。
 
-「![Gif](https://raw.github.com/wiki/keisuke0526/L-MGMT/assets/images/60959289/94452945-153a0b80-01eb-11eb-80b2-99f6f2ecaaef.gif)」
+
 
 ## 注目して欲しいところ
 - 環境開発にDockerを使用。
