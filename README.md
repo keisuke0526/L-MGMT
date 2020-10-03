@@ -13,7 +13,8 @@ http://54.178.22.150:3000/
 - CircleCIを使って自動テスト(RSpec,rubocop)を実行。
 
 ## DEMO
-一覧ページ
+
+### 一覧ページ
 <img width="1436" alt="DEMO" src="https://user-images.githubusercontent.com/60959289/94989656-6eba8580-05b1-11eb-8e5d-9ac5e83fab90.png">
 
 ## 使用技術
