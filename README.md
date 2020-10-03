@@ -17,6 +17,12 @@ http://54.178.22.150:3000/
 ### 一覧ページ
 <img width="1436" alt="DEMO" src="https://user-images.githubusercontent.com/60959289/94989656-6eba8580-05b1-11eb-8e5d-9ac5e83fab90.png">
 
+### 登録ページ
+<img width="1433" alt="DEMO2" src="https://user-images.githubusercontent.com/60959289/94989737-f0aaae80-05b1-11eb-9cdd-49781e138a31.png">
+
+### 詳細、情報編集削除ページ
+<img width="1438" alt="demo3" src="https://user-images.githubusercontent.com/60959289/94989783-3a939480-05b2-11eb-8714-8742f93de4ae.png">
+
 ## 使用技術
 
 ### 開発環境
@@ -44,8 +50,15 @@ http://54.178.22.150:3000/
 
 
 ## 機能一覧
-- 荷物、顧客情報登録機能(CRUD)
+- 荷物、顧客情報登録機能
+- 情報編集削除機能
 - ゲスト名でお荷物の検索機能
+
+## 今後実装したい機能
+- 検索機能のインクリメンタルサーチ化
+- 荷物をお渡しした後、情報をトップページに残すのではなく、履歴(お渡し済み)ページに移動するようにする
+- 数分の短時間のお預かりのために、クイックに登録ができる機能を追加
+- Nginxでの環境構築
 
 
 
