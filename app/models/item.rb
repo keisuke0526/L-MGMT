@@ -5,5 +5,7 @@ class Item < ApplicationRecord
   end
 
   validates :guest_name, presence: true, format: { with: /\A(?:\p{Katakana}|[ー－]|[a-zA-Z])+\z/i  }
+  validates :pickup_day, :houseroom, presence: true
+
   validates :remark, length: {maximum: 100}
 end

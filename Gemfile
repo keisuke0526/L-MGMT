@@ -41,6 +41,8 @@ gem 'haml-rails'
 gem 'pry-rails'
 gem 'pry-rails'
 gem 'rspec-rails'
+gem 'rails-controller-testing'
+gem 'factory_bot_rails'
 gem 'rubocop', require: false
 gem 'sprockets', '3.7.2'
 
