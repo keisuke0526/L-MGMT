@@ -8,7 +8,7 @@ worker_processes 1
 working_directory app_path
 
 #Unicornの起動に必要なファイルの設置場所を指定
-pid '/var/www/L-MGMT/tmp/unicorn.pid'
+pid "/var/www/#{app_path}/tmp/unicorn.pid"
 
 #ポート番号を指定
 listen "#{app_path}/tmp/sockets/unicorn.sock"
