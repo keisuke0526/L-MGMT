@@ -10,20 +10,10 @@ services:
 
   web:
     build: .
-    command: bundle exec unicorn -p 3000 -c config/unicorn.conf.rb
+    command: bash -c "rm -fR tmp/pids/* ; bundle exec unicorn -c config/unicorn.rb"
     volumes:
       - .:/app_name
     ports:
       - "3000:3000"
     links:
       - db
-
-  nginx:
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile
-    ports:
-      - 81:80
-    restart: always 
-    depends_on:
-      - web 
