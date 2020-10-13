@@ -26,7 +26,7 @@ services:
       - 80:80
     restart: always #明示的にstopさせるまでリスタートする。（失敗するたび遅延あり）
     volumes:
-      - tmp-data:/LK-MGMT/tmp/sockets
+      - tmp-data:/L-MGMT/tmp/sockets
       - public-data:/L-MGMT/public
     depends_on:
       - web 
