@@ -10,7 +10,7 @@ services:
 
   web:
     build: .
-    command: dockerize -wait tcp://db:3306 -timeout 20s bundle exec unicorn -p 3000 -c /L-MGMT/config/unicorn.conf.rb
+    command: bundle exec unicorn -p 3000 -c config/unicorn.conf.rb
     volumes:
       - .:/app_name
     ports:
@@ -24,6 +24,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - 81:80
-    restart: always #明示的にstopさせるまでリスタートする。（失敗するたび遅延あり）
+    restart: always 
     depends_on:
       - web 
