@@ -2,17 +2,12 @@ FROM ruby:2.5.3
 ENV DOCKERIZE_VERSION v0.6.1
 
 # 必要なパッケージのインストール（基本的に必要になってくるものだと思うので削らないこと）
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends\
-    nodejs  \
-    mariadb-client  \
-    build-essential  \
-    wget \
-    && wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
-    && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
-    && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*      
+RUN apt-get update -qq && \
+    apt-get install -y apt-utils \
+                       build-essential \
+                       libpq-dev \
+                       nodejs \
+                       mysql-client  
 
 # 作業ディレクトリの作成、設定
 RUN mkdir /app_name 
