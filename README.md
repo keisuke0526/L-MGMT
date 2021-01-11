@@ -4,6 +4,7 @@
 ## 概要
 ゲスト名や引き取り日、保管場所(必須項目)で、お客様のお荷物を管理できます。状況により、部屋番号や電話番号、備考欄を登録できます。詳細画面にて、情報の編集、削除が可能です。
 さらに、登録した情報を名前で検索可能です。
+ホテルマンの忙しさを考え、できるだけ早く登録できるよう、ひと目見るだけで使い方がわかるようにシンプルにしました。
 
 ## 本番環境
 http://54.178.22.150:3000/
@@ -70,14 +71,3 @@ http://54.178.22.150:3000/
 - NginxもDockerに組み込む
 - もっとJSを組み込む
 - RDS(インスタンス作成済み)
-
-## itemsテーブル
-|Column|Type|Option|
-|------|----|------|
-|guest_name|string|null: false|
-|pickup_day|date|null: false|
-|houseroom|string|null: false|
-|room_no|integer||
-|phone_number|integer||
-|remark|string||
-
