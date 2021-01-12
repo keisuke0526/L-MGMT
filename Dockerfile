@@ -1,21 +1,13 @@
-FROM ruby:2.5.3
+FROM ruby:2.6.3
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
+#「-qqオプション」はエラー以外何も吐かないことを意味する。
+#「-y」オプションは全部yesで実行することを意味する。
 
-# 必要なパッケージのインストール（基本的に必要になってくるものだと思うので削らないこと）
-RUN apt-get update -qq && \
-    apt-get install -y build-essential \ 
-                       libpq-dev \        
-                       nodejs           
+RUN mkdir /buggage-mgt
+WORKDIR /buggage-mgt
 
-# 作業ディレクトリの作成、設定
-RUN mkdir /app_name 
-##作業ディレクトリ名をAPP_ROOTに割り当てて、以下$APP_ROOTで参照
-ENV APP_ROOT /app_name 
-WORKDIR $APP_ROOT
+COPY Gemfile /buggage-mgt/Gemfile
+COPY Gemfile.lock /buggage-mgt/Gemfile.lock
 
-# ホスト側（ローカル）のGemfileを追加する（ローカルのGemfileは【３】で作成）
-ADD ./Gemfile $APP_ROOT/Gemfile
-ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
-
-# Gemfileのbundle install
 RUN bundle install
-ADD . $APP_ROOT
+COPY . /buggage-mgt
