@@ -51,8 +51,7 @@ test:
 #
 production:
   <<: *default
-  database: <%= Rails.application.credentials.db[:database] %>
-  username: <%= Rails.application.credentials.db[:username] %>
-  password: <%= Rails.application.credentials.db[:password] %>
-  socket: <%= Rails.application.
-  entials.db[:socket] %>
+  database: l-mgmt_production
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  #socket: /var/lib/mysql/mysql.sock
