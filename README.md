@@ -38,13 +38,13 @@
 - JavaScript(JQuery)
 
 ## バックエンド
-- Ruby 2.5.3
+- Ruby 2.6.3
 - Ruby on Rails 5.2.4.3
 - MySQL 5.6.47
 
 ## インフラ
 - AWS
-- EC2
+- EC2(Amazon Linux2 AMI)
 
 ## クラウドアーキテクチャ
 <img width="1246" alt="lmgmt" src="https://user-images.githubusercontent.com/60959289/94340247-3825bd80-003b-11eb-9c81-62ea4a818d3c.png">

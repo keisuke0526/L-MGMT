@@ -45,6 +45,7 @@ gem 'rails-controller-testing'
 gem 'factory_bot_rails'
 gem 'rubocop', require: false
 gem 'sprockets', '3.7.2'
+gem 'sqlite3', '~> 1.3.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
