@@ -22,13 +22,13 @@ http://52.197.1.109/
 ## DEMO
 
 ### 一覧ページ
-<img width="1436" alt="DEMO" src="https://user-images.githubusercontent.com/60959289/94989656-6eba8580-05b1-11eb-8e5d-9ac5e83fab90.png">
+<img width="1438" alt="2581ede6f45990b257eae8b8473c278d" src="https://user-images.githubusercontent.com/60959289/104668315-33386700-571b-11eb-9419-f18df934de31.png">
 
 ### 登録ページ
 <img width="1433" alt="DEMO2" src="https://user-images.githubusercontent.com/60959289/94989737-f0aaae80-05b1-11eb-9cdd-49781e138a31.png">
 
 ### 詳細、情報編集削除ページ
-<img width="1438" alt="demo3" src="https://user-images.githubusercontent.com/60959289/94989783-3a939480-05b2-11eb-8714-8742f93de4ae.png">
+<img width="1436" alt="9d0817f567af7845b364525e70787aac" src="https://user-images.githubusercontent.com/60959289/104668503-8e6a5980-571b-11eb-8173-317c5de22eec.png">
 
 ## 使用技術
 
