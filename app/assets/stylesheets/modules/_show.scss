@@ -5,6 +5,7 @@
   letter-spacing: 0.1em;
   position: absolute;
   margin-top: 50px;
+  box-shadow: 0 0 4px gray;
   .table-responsive {
     color: black;
     padding: 50px;
@@ -15,6 +16,7 @@
       width: 60%;
       margin: 0 auto;
       position: relative;
+      box-shadow: 0 0 4px gray;
       thead {
         margin: 0 auto;
         tr {
@@ -30,7 +32,7 @@
         }
       }
       tr:nth-child(odd) td {
-        background-color: #eee; 
+        background-color: #eee;
      }
     }
   }
@@ -74,12 +76,13 @@
   }
   .remark-box {
     height: 100px;
-    width: 50%;
+    width: 56%;
     background-color: #eee;
     margin: 0 auto;
     position: relative;
     overflow: auto;
     font-size: 15px;
+    box-shadow: 0 0 4px gray;
     &__top {
       position:absolute;
       top: 10px;
@@ -95,6 +98,7 @@
   .container {
     height: 100px;
     width: 50%;
+    display: flex;
     margin: 0 auto;
     position: relative;
     overflow: auto;
@@ -112,7 +116,7 @@
       }
     }
     .container__back {
-      float: right;
+      margin-left: auto;
       @include show-btn;
       @include hov-btn;
     }

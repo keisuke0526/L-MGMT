@@ -2,13 +2,14 @@
 
 .main {
   height: calc(100vh - 100px - 30px);
-  width: 100%;
+  width: 80%;
   overflow: auto;
   letter-spacing: 0.1em;
+  margin:0 auto;
   .search-form {
     width: 100%;
     text-align: center;
-    margin-top: 40px;
+    margin: 40px 0;
     .search-input {
       width: 30%;
       vertical-align : middle;
@@ -25,12 +26,13 @@
     font-size: 15px;
     display: flex;
     text-align: center;
+    box-shadow: 0 0 4px gray;
     .chart {
       width: 60%;
       margin: 0 auto;
       position: relative;
       thead {
-        border-bottom: 2px dashed #ccc;
+        border-bottom: 2px solid #ccc;
         margin: 0 auto;
         tr {
           th {
@@ -40,7 +42,7 @@
       }
       tbody {
         .clickable-row {
-          border-bottom: 2px dashed #ccc;
+          border-bottom: 2px solid #ccc;
           height: 80px;
         }
         .clickable-row:hover {
@@ -49,7 +51,7 @@
         }
       }
       tr:nth-child(odd) td {
-        background-color: #eee; 
+        background-color: #eee;
      }
     }
   }
@@ -96,6 +98,7 @@
   }
   .to-root-container {
     text-align: center;
+    margin-top: 30px;
     .back-btn {
     text-decoration: none;
     color: black;
