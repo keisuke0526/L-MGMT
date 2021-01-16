@@ -52,8 +52,7 @@ http://52.197.1.109/
 - EC2(Amazon Linux2 AMI)
 
 ## クラウドアーキテクチャ
-<img width="1246" alt="lmgmt" src="https://user-images.githubusercontent.com/60959289/94340247-3825bd80-003b-11eb-9c81-62ea4a818d3c.png">
-
+<img width="766" alt="d08a402bf7a19efb3e52f40940f3e96a" src="https://user-images.githubusercontent.com/60959289/104796464-ce077300-57f9-11eb-8818-83bda766161e.png">
 
 
 ## 機能一覧
